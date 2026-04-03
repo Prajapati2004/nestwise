@@ -1,0 +1,145 @@
+.pageHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+  gap: 1rem;
+}
+
+.statsRow {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-bottom: 1.5rem;
+}
+
+.statBox {
+  background: var(--surface);
+  border: 1.5px solid var(--border);
+  border-radius: var(--r-md);
+  padding: 14px;
+  text-align: center;
+}
+.statVal   { font-size: 26px; font-weight: 700; }
+.statLabel { font-size: 11px; color: var(--muted); margin-top: 3px; }
+
+/* ── Kanban ── */
+.kanban {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  align-items: start;
+}
+
+.col {
+  background: #f8f8f4;
+  border-radius: var(--r-md);
+  padding: 12px;
+  min-height: 120px;
+}
+
+.colTitle {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.colCount {
+  background: var(--border);
+  color: var(--subtle);
+  font-size: 10px;
+  padding: 2px 6px;
+  border-radius: 8px;
+  font-weight: 700;
+}
+
+.emptyCol {
+  font-size: 12px;
+  color: #ccc;
+  text-align: center;
+  padding: 16px 0;
+  font-style: italic;
+}
+
+/* ── Kanban card ── */
+.card {
+  background: var(--surface);
+  border: 1.5px solid var(--border);
+  border-radius: var(--r-md);
+  padding: 11px 13px;
+  margin-bottom: 8px;
+  transition: box-shadow 0.15s;
+}
+.card:hover      { box-shadow: var(--shadow-sm); }
+.card:last-child { margin-bottom: 0; }
+
+.topPick {
+  border-left: 4px solid var(--g);
+  border-radius: 0 var(--r-md) var(--r-md) 0;
+}
+.topPickLabel {
+  font-size: 11px;
+  color: var(--gm);
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.kaddr  { font-size: 13px; font-weight: 700; }
+.kprice { font-size: 12px; color: var(--muted); margin-top: 2px; }
+.knote  { font-size: 11px; color: #aaa; margin-top: 5px; font-style: italic; }
+
+.scorePill {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  padding: 3px 8px;
+  border-radius: 8px;
+  margin-top: 6px;
+  font-weight: 600;
+}
+.scoreGreen  { background: #dcfce7; color: #166534; }
+.scoreYellow { background: #fef3c7; color: #92400e; }
+.scoreRed    { background: #fee2e2; color: #991b1b; }
+
+/* ── Move row ── */
+.moveRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid var(--border2);
+}
+.moveBtn {
+  font-size: 10px;
+  padding: 3px 7px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--surface);
+  color: var(--muted);
+  cursor: pointer;
+  font-family: var(--font-sans);
+  transition: all 0.12s;
+  white-space: nowrap;
+}
+.moveBtn:hover {
+  background: var(--gl);
+  border-color: var(--g);
+  color: var(--gm);
+}
+
+@media (max-width: 900px) {
+  .kanban    { grid-template-columns: repeat(2, 1fr); }
+  .statsRow  { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 500px) {
+  .kanban    { grid-template-columns: 1fr; }
+  .statsRow  { grid-template-columns: repeat(2, 1fr); }
+  .pageHead  { flex-direction: column; align-items: flex-start; }
+}

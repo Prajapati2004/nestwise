@@ -1,0 +1,110 @@
+.redFlags {
+  background: #fee2e2;
+  border-radius: var(--r-md);
+  padding: 16px;
+  margin-bottom: 1.75rem;
+}
+.redFlags h4 {
+  font-size: 14px;
+  font-weight: 700;
+  color: #991b1b;
+  margin-bottom: 10px;
+}
+.flagItem {
+  font-size: 13px;
+  color: #7f1d1d;
+  padding: 4px 0;
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  line-height: 1.5;
+}
+.flagIcon { flex-shrink: 0; }
+
+.askAiBtn {
+  margin-top: 12px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #991b1b;
+  background: rgba(255,255,255,0.6);
+  border: 1.5px solid #fca5a5;
+  border-radius: var(--r-sm);
+  padding: 7px 14px;
+  cursor: pointer;
+  font-family: var(--font-sans);
+  transition: background 0.15s;
+}
+.askAiBtn:hover { background: rgba(255,255,255,0.9); }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.25rem;
+}
+
+.card {
+  background: var(--surface);
+  border: 1.5px solid var(--border);
+  border-radius: var(--r-lg);
+  padding: 1.5rem;
+}
+.cardTop { border: 2px solid var(--g); }
+
+.topBadge {
+  background: var(--gl);
+  color: var(--gm);
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 6px;
+  display: inline-block;
+  margin-bottom: 12px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+.avatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+.name  { font-size: 16px; font-weight: 700; }
+.title { font-size: 13px; color: var(--muted); margin-top: 2px; }
+
+.stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+.stat {
+  text-align: center;
+  background: var(--bg);
+  border-radius: var(--r-sm);
+  padding: 8px 4px;
+}
+.statVal   { font-size: 16px; font-weight: 700; color: var(--g); }
+.statLabel { font-size: 10px; color: var(--muted); margin-top: 2px; }
+
+.review {
+  background: var(--bg);
+  border-radius: var(--r-sm);
+  padding: 10px;
+  margin: 12px 0 14px;
+}
+.reviewText   { font-size: 12px; color: var(--subtle); line-height: 1.6; }
+.reviewAuthor { font-size: 11px; color: var(--muted);  margin-top: 4px; font-weight: 500; }
+
+@media (max-width: 500px) {
+  .grid { grid-template-columns: 1fr; }
+}
