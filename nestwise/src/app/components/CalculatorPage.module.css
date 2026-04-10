@@ -32,6 +32,96 @@
 .fgood { color: var(--gm); font-weight: 600; }
 .fok   { color: var(--w);  font-weight: 600; }
 .fbad  { color: var(--d);  font-weight: 600; }
+
+/* ── Address research field ── */
+.addressField {
+  margin-bottom: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1.5px solid var(--border2);
+}
+.addressField label {
+  display: block;
+  font-size: 12px;
+  color: var(--subtle);
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+.addressRow {
+  display: flex;
+  gap: 8px;
+}
+.addressInput {
+  flex: 1;
+  padding: 9px 12px;
+  border: 1.5px solid var(--border);
+  border-radius: var(--r-sm);
+  font-size: 14px;
+  font-family: var(--font-sans);
+  background: var(--surface);
+  color: var(--text);
+  transition: border-color 0.15s;
+}
+.addressInput:focus { border-color: var(--g); outline: none; }
+.researchBtn {
+  white-space: nowrap;
+  padding: 9px 16px !important;
+  font-size: 13px !important;
+}
+.researchNote {
+  margin-top: 8px;
+  font-size: 12px;
+  color: var(--gm);
+  background: var(--gl);
+  padding: 7px 10px;
+  border-radius: var(--r-sm);
+  line-height: 1.5;
+}
+.researchError {
+  margin-top: 8px;
+  font-size: 12px;
+  color: #991b1b;
+  background: var(--dl);
+  padding: 7px 10px;
+  border-radius: var(--r-sm);
+}
+.researchHint {
+  margin-top: 6px;
+  font-size: 11px;
+  color: var(--muted);
+  font-style: italic;
+}
+
+/* ── Score gate ── */
+.scoreGate {
+  text-align: center;
+  padding: 1.5rem 1rem;
+}
+.scoreGateIcon  { font-size: 36px; margin-bottom: 12px; }
+.scoreGateTitle { font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 8px; }
+.scoreGateText  { font-size: 13px; color: var(--subtle); line-height: 1.6; max-width: 320px; margin: 0 auto; }
+
+/* Data source line */
+.dataSource {
+  font-size: 11px;
+  color: var(--muted);
+  margin-bottom: 12px;
+  font-style: italic;
+}
+
+/* Spinner */
+.spinner {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border: 2px solid rgba(255,255,255,0.4);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+  vertical-align: middle;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
 @media (max-width: 700px) {
   .calcGrid { grid-template-columns: 1fr; }
+  .addressRow { flex-direction: column; }
 }
