@@ -1,0 +1,37 @@
+.calcGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+.panelTitle { font-size: 15px; font-weight: 600; margin-bottom: 1.25rem; }
+.outputCol { display: flex; flex-direction: column; gap: 1.25rem; }
+.crow {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--border2);
+  font-size: 14px;
+}
+.crowTotal { font-weight: 700; font-size: 16px; border-bottom: none; padding-top: 12px; }
+.clabel { color: var(--subtle); }
+.scoreBig { display: flex; align-items: center; gap: 18px; margin-bottom: 1.25rem; }
+.scoreLabel { font-size: 22px; font-weight: 700; }
+.scoreSub   { font-size: 12px; color: var(--subtle); margin-top: 3px; }
+.factorRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--border2);
+  font-size: 13px;
+  gap: 12px;
+}
+.factorRow:last-of-type { border-bottom: none; }
+.fl { color: var(--subtle); }
+.fgood { color: var(--gm); font-weight: 600; }
+.fok   { color: var(--w);  font-weight: 600; }
+.fbad  { color: var(--d);  font-weight: 600; }
+@media (max-width: 700px) {
+  .calcGrid { grid-template-columns: 1fr; }
+}

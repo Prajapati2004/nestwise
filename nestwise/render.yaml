@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: nestwise
+    runtime: node
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_VERSION
+        value: 20
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: FIRECRAWL_API_KEY
+        sync: false
+      - key: OPENWEB_NINJA_API_KEY
+        sync: false
