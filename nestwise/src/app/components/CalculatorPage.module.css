@@ -5,7 +5,8 @@
   align-items: start;
 }
 .panelTitle { font-size: 15px; font-weight: 600; margin-bottom: 1.25rem; }
-.outputCol { display: flex; flex-direction: column; gap: 1.25rem; }
+.outputCol  { display: flex; flex-direction: column; gap: 1.25rem; }
+
 .crow {
   display: flex;
   justify-content: space-between;
@@ -15,9 +16,11 @@
 }
 .crowTotal { font-weight: 700; font-size: 16px; border-bottom: none; padding-top: 12px; }
 .clabel { color: var(--subtle); }
-.scoreBig { display: flex; align-items: center; gap: 18px; margin-bottom: 1.25rem; }
+
+.scoreBig   { display: flex; align-items: center; gap: 18px; margin-bottom: 1.25rem; }
 .scoreLabel { font-size: 22px; font-weight: 700; }
 .scoreSub   { font-size: 12px; color: var(--subtle); margin-top: 3px; }
+
 .factorRow {
   display: flex;
   align-items: center;
@@ -28,12 +31,11 @@
   gap: 12px;
 }
 .factorRow:last-of-type { border-bottom: none; }
-.fl { color: var(--subtle); }
+.fl    { color: var(--subtle); }
 .fgood { color: var(--gm); font-weight: 600; }
 .fok   { color: var(--w);  font-weight: 600; }
 .fbad  { color: var(--d);  font-weight: 600; }
 
-/* ── Address research field ── */
 .addressField {
   margin-bottom: 16px;
   padding-bottom: 16px;
@@ -46,10 +48,7 @@
   margin-bottom: 6px;
   font-weight: 500;
 }
-.addressRow {
-  display: flex;
-  gap: 8px;
-}
+.addressRow   { display: flex; gap: 8px; }
 .addressInput {
   flex: 1;
   padding: 9px 12px;
@@ -62,11 +61,8 @@
   transition: border-color 0.15s;
 }
 .addressInput:focus { border-color: var(--g); outline: none; }
-.researchBtn {
-  white-space: nowrap;
-  padding: 9px 16px !important;
-  font-size: 13px !important;
-}
+.researchBtn { white-space: nowrap; padding: 9px 16px !important; font-size: 13px !important; }
+
 .researchNote {
   margin-top: 8px;
   font-size: 12px;
@@ -89,30 +85,43 @@
   font-size: 11px;
   color: var(--muted);
   font-style: italic;
+  line-height: 1.5;
 }
 
-/* ── Score gate ── */
-.scoreGate {
-  text-align: center;
-  padding: 1.5rem 1rem;
+.researchDetails {
+  margin-top: 10px;
+  background: var(--bg);
+  border-radius: var(--r-sm);
+  padding: 8px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 }
+.researchDetailRow {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  color: var(--subtle);
+  gap: 8px;
+}
+.researchDetailRow span:first-child { color: var(--muted); white-space: nowrap; }
+.researchDetailRow span:last-child  { color: var(--text); font-weight: 500; text-align: right; }
+
+.estimateNote {
+  margin-top: 10px;
+  font-size: 11px;
+  color: var(--muted);
+  font-style: italic;
+}
+
+.scoreGate      { text-align: center; padding: 1.5rem 1rem; }
 .scoreGateIcon  { font-size: 36px; margin-bottom: 12px; }
 .scoreGateTitle { font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 8px; }
 .scoreGateText  { font-size: 13px; color: var(--subtle); line-height: 1.6; max-width: 320px; margin: 0 auto; }
 
-/* Data source line */
-.dataSource {
-  font-size: 11px;
-  color: var(--muted);
-  margin-bottom: 12px;
-  font-style: italic;
-}
-
-/* Spinner */
 .spinner {
   display: inline-block;
-  width: 14px;
-  height: 14px;
+  width: 14px; height: 14px;
   border: 2px solid rgba(255,255,255,0.4);
   border-top-color: #fff;
   border-radius: 50%;
@@ -122,6 +131,6 @@
 @keyframes spin { to { transform: rotate(360deg); } }
 
 @media (max-width: 700px) {
-  .calcGrid { grid-template-columns: 1fr; }
+  .calcGrid   { grid-template-columns: 1fr; }
   .addressRow { flex-direction: column; }
 }
